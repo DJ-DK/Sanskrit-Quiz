@@ -75,6 +75,7 @@ start_btn.onclick = () => {
                     document.getElementById( "loader" ).style.display = "none";
                     document.getElementById( "wrapper" ).style.display = "block";
                     alert( "You have already played the quiz, this quiz can be played only once." );
+                    bgSound.pause();
                 }
 
 
