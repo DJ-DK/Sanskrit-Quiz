@@ -6,7 +6,7 @@ let UserNameVerification = localStorage.getItem( "User_Name" );
 
 // Security at startup script
 
-form.onsubmit = ( e ) => {
+form.onsubmit = (e)=> {
     e.preventDefault();
     document.getElementById( "loader" ).style.display = "block";
     document.getElementById( "wrapper" ).style.display = "none";
