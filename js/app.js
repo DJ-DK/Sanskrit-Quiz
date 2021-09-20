@@ -10,7 +10,6 @@ const time_line = document.querySelector( "header .time_line" );
 const timeText = document.querySelector( ".timer .time_left_txt" );
 const timeCount = document.querySelector( ".timer .timer_sec" );
 let database = firebase.database();
-var bgSound = new Audio( 'bg.mp3' );
 
 let UserNameVerification = localStorage.getItem( "User_Name" );
 let User__Verification = localStorage.getItem( "verify" );
@@ -53,10 +52,8 @@ if ( User__Verification == null || User__Verification == "" ) {
 
 // if startQuiz button clicked
 start_btn.onclick = () => {
-    bgSound.play();
     document.getElementById( "loader" ).style.display = "block";
     document.getElementById( "wrapper" ).style.display = "none";
-
     if ( !( ( User__Verification == null ) || ( User__Verification == "" ) ) ) {
 
         let database_ref = firebase.database().ref(); //different because ref added means refernce
